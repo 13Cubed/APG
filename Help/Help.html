@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="AppleTitle" content="APGHelp" />
+        <meta name="AppleIcon" content="Help/AppIcon16.png" />
+        <style>
+            body {
+                font-family: Helvetica;
+                font-size: 12px;
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Logo.png" width="275" height="60">
+            <br><hr width="100%">
+            <p>APG generates passwords with two (2) to eight (8) random common dictionary words. It displays length and approximate bits of entropy.</p>
+            <h2><u>FAQ</u></h2>
+            <h3>How many words are included in the default word list?</h3>
+            <p>4,701</p>
+            <h3>What is the origination of the word list?</h3>
+            <p>This word list was obtained from Trinity College Department of Computer Science Cryptology Resources Index. Words less than 4 characters in length and contractions have been removed from the list included in APG.</p>
+            <h3>Can I change the word list used by APG?</h3>
+            <p>Absolutely. Right-click on the APG app icon and choose <b>Show Package Contents</b>. Browse to <b>Contents</b> > <b>Resources</b> and replace the <b>Words.txt</b> file with your own. Most UNIX distributions, including OS X, have a built-in word list of approximately 250,000 words. That word list can be found here: <b>/usr/share/dict/words</b>.</p>
+            <h3>If I replace the word list will the approximate bits of entropy listed still be correct?</h3>
+            <p>APG will evaluate the total number of words in the word list (x) and then evaluate log2(x). The calculation is simply the number of words (n) * log2(x), taking into account the use of any separators.</p>
+            <h3>What random number mechanism does APG use and how is it seeded?</h3>
+            <p>APG uses the newer arc4random() function as opposed to rand() or random(). This function is self-seeding and uses a superior algorithm.</p>
+    </body>
+</html>
